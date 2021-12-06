@@ -1,0 +1,255 @@
+:root{
+    /* PRIMARY COLORS  */
+    --Strong-cyan: hsl(172, 67%, 45%);
+    
+    /* NEUTRAL COLORS  */
+
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Darker-grayish-cyan: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Lighter-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    
+    /* FONTS  */
+    --font:'Space Mono', monospace;
+    --weight-regular:400;
+    --weight-mid:500;
+    --weight-heavy:700;
+}
+
+*{
+    margin: 0 ;
+    padding: 0;
+}
+
+html,
+body{
+    min-width: 100vw;
+    max-height: 100vh;
+    position: relative;
+}
+
+body{
+    font-family: var(--font);
+    background: var(--Light-grayish-cyan);
+}
+
+h1{
+    color: var(--Very-dark-cyan);
+    text-align: center;
+    margin: 3em auto;
+    font-size: 2.5ch;
+    font-weight: var(--weight-heavy);
+}
+
+
+section{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font);
+    background: var(--White);
+    border-radius:15px;
+    margin: .5em auto;
+    padding: 2% 1%;
+    width: 50%;
+    gap: 1.5em;
+}
+
+input{
+    all: unset; 
+}
+
+h2{
+    font-size: 1.5ch;
+    margin: 2% 0;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    appearance: none;
+    margin: 0;
+}
+
+/* IN CASE OF FIREFOX USE THIS  */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+.flex-display{
+    display: flex;
+}
+
+.flex-display.row{
+    flex-direction: row;
+}
+
+.flex-display.col{
+    flex-direction: column;
+}
+.boxHover{
+    transition-property: all;
+    transition-duration: .2s;
+}
+
+.boxHover:hover{
+    outline: 1.5px solid var(--Very-dark-cyan);
+    border-radius: 1px;
+    box-shadow: 0 0 2px 2px var(--Very-dark-cyan);
+}
+.containers{
+    flex: 1 1 50%;
+    color: var(--Darker-grayish-cyan);
+    font: 1ch;
+    padding:0 2%;
+    padding-bottom: 5%;
+}
+
+
+.bill-container,
+.count-of-people{
+    background: var(--Lighter-grayish-cyan);
+    justify-content: space-between;
+    align-items: center;
+    padding :1px 5px;
+}
+
+.count-of-people>h3{
+    display: inline;
+}
+
+.box-er{
+    border: 1px solid red;
+}
+
+.bill-container>h3{
+    margin: .2em .3em;
+}
+
+#billAmount,
+#people-count{
+    text-align: right;
+    width: 80%;
+    margin: 0 1%;
+}
+
+#billAmount:hover, 
+#people-count:hover{
+    border-color: var(--Lighter-grayish-cyan);
+}
+
+/* BUTTONS SECTION HERE  */
+.button-container{
+    flex-wrap: wrap;
+    margin: 2% 1%;
+}
+
+.tip-btn,
+.tip-btn.cus{
+    width: 29%;
+    border: none;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 5px;
+    color: var(--White);
+    margin: 2%;
+    padding: 2%;
+    font-size: 1.8ch;
+    font-family: var(--font);
+    font-weight: var(--weight-heavy);
+    transition-duration: 200ms;
+}
+
+.tip-btn.cus{
+    background: var(--Lighter-grayish-cyan);
+    color: var(--Darker-grayish-cyan);
+    font-weight: var(--weight-heavy);
+    text-align: center;
+    margin: 0;
+}
+
+.num-of-people{
+    position: inherit;
+}
+
+#if-zero{
+    display: none;
+    position: absolute;
+    color: red;
+    opacity: 0.8; 
+    translate: 35% 5%;
+}
+
+.tip-btn:hover{
+    background: var(--Strong-cyan);
+    color: #000;
+}
+
+/* PEOPLE COUNT SECTION HERE  */
+.count-of-people{
+    padding: 5px ;
+}
+/* TOTAL AMOUNT CONTAINER HERE  */
+.containers.colored{
+    background: var(--Very-dark-cyan);
+    color: var(--White);
+    border-radius: inherit;
+    position: relative;
+}
+
+.containers.colored.flex-display,
+.tip-container{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tip-container{
+    margin: 1% auto;
+    width: 80%;
+}
+
+.tip-container>h3{
+    font-size: 1.2ch;
+}
+.tip-container>h3>span{
+    display: block;
+    color: var(--Dark-grayish-cyan);
+}
+
+#total-amount,
+#tip-amount{
+    font-size: 5ch;
+    color: var(--Strong-cyan);
+}
+
+#reset-button{
+    background: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-size: 1.8ch;
+    font-weight: var(--weight-mid);
+    width: 80%;
+    padding:8px 7px;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    /* IN CASE FOR FIREFOX */
+    /* bottom: 15%;
+    right: 50%;
+    translate: 50% 50%; */
+    
+    /* case for chrome browser  */
+    bottom: 15%;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+/* MEDIA QUERY HERE !!!! */
+@media (min-width:375px) and (max-width:720px) {
+    #main{
+        flex-direction: column;
+        width: 80%;
+    }
+    .containers{
+        padding-bottom: 25%;
+    }
+
+}

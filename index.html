@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel= "icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- CSS LINKS HERE  -->
+  <link rel="stylesheet" href="CSS/style.css">
+  
+  <!-- GOOGLE FONT LINK HERE  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+  
+  <!-- FONT AWESOME CDN HERE  -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <h1> Spli <br> tter</h1>
+  <section id="main" class="flex-display row">
+    
+    <div class="containers flex-display col">
+      <h2>Bill</h2>
+      <div class="bill-container flex-display row boxHover">
+        <h3>$</h3>
+        <input type="number" placeholder="$0" name="bill-amount" id="billAmount">
+      </div>
+
+      <!-- TIPS BUTTON SECTION HERE  -->
+      <h2>Select Tip</h2>
+      <div class="button-container flex-display row">
+        <button value="5"    class="tip-btn">5%</button>
+        <button value="10"   class="tip-btn">10%</button>
+        <button value="25"   class="tip-btn">25%</button>
+        <button value="30"   class="tip-btn">30%</button>
+        <button value="50"   class="tip-btn">50%</button>
+        <input type="number" class="tip-btn cus" placeholder="Custom" name="Custom-tip" id="cus-tip">
+      </div>
+
+      <!-- TIP DISPLAY SECTION HERE -->
+      <h2 class="num-of-people" >Number of Poeple <span id="if-zero">Can't Be Zero</span></h2> 
+      <div class="count-of-people boxHover" id="count">
+        <h3><i class="fas fa-xl fa-user-alt"></i></h3>
+        <input id="people-count" placeholder="0" type="text">
+      </div>
+    </div>
+    <div class="containers colored">
+      <div class="tip-container flex-display row" >
+        <h3> Tip Amount <span>/  Person</span></h3>
+        <h3 id="tip-amount" class="amount">0</h3>
+      </div>
+      <div class="tip-container flex-display row">
+        <h3>Total <span>/  Person</span></h3>
+        <h3 id="total-amount" class="amount" > 0</h3>
+      </div>
+      <button id="reset-button">RESET</button>
+    </div>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a hreff="#">Adnan Ballari</a>.
+  </div>
+
+  <!-- JQUERY LINK HERE  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="JS/index.js"></script>
+</body>
+</html>
